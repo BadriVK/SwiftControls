@@ -1,4 +1,13 @@
-# SwiftControls in Swift 2.0 (iOS 9)
+
+## Description
+Swift2 cocoa touch controls with multiple storyboard and web operation with Swift closure 
+
+##Requirements
+>Swift 2 (Xcode 7+)
+
+>iOS 8+
+
+>ARC
 
 ### SwiftControls cover the following controls:
 
