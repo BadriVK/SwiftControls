@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="oW0-sj-wg9">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="a0L-9x-3q9" customClass="HomeViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mES-J8-ZYS"/>
+                        <viewControllerLayoutGuide type="bottom" id="iN4-tu-aTn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Kg-w9-t6J">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-y3-sap">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="a0L-9x-3q9" id="cG7-sS-5tv"/>
+                                    <outlet property="delegate" destination="a0L-9x-3q9" id="7Am-mc-8pN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hyo-y3-sap" firstAttribute="leading" secondItem="0Kg-w9-t6J" secondAttribute="leading" id="6uT-kN-DVl"/>
+                            <constraint firstAttribute="trailing" secondItem="hyo-y3-sap" secondAttribute="trailing" id="P5M-wt-HDg"/>
+                            <constraint firstItem="hyo-y3-sap" firstAttribute="top" secondItem="0Kg-w9-t6J" secondAttribute="top" id="aMG-R9-afy"/>
+                            <constraint firstItem="iN4-tu-aTn" firstAttribute="top" secondItem="hyo-y3-sap" secondAttribute="bottom" id="e2c-1c-fBA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblViewOptions" destination="hyo-y3-sap" id="T8W-JO-s1H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPJ-lX-rP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="-147"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="oKA-3B-1bm">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="vmd-Ik-f61" customClass="MapViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AJI-zT-1LL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Imj-Sf-04U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RW6-T1-Qqp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jXR-M5-CUz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vmd-Ik-f61" id="lRG-rF-RhM"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jXR-M5-CUz" firstAttribute="top" secondItem="RW6-T1-Qqp" secondAttribute="top" id="Oaf-5i-XMf"/>
+                            <constraint firstAttribute="trailing" secondItem="jXR-M5-CUz" secondAttribute="trailing" id="Qmr-C5-bOO"/>
+                            <constraint firstItem="jXR-M5-CUz" firstAttribute="leading" secondItem="RW6-T1-Qqp" secondAttribute="leading" id="Yhp-dR-juL"/>
+                            <constraint firstItem="Imj-Sf-04U" firstAttribute="top" secondItem="jXR-M5-CUz" secondAttribute="bottom" id="igI-dw-luO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapview" destination="jXR-M5-CUz" id="7i5-ds-Ihb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKh-zA-YLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="-127"/>
+        </scene>
+        <!--Photo Scroller View Controller-->
+        <scene sceneID="IgI-JP-LK3">
+            <objects>
+                <viewController storyboardIdentifier="PhotoScrollerViewController" id="rHq-x4-1oY" customClass="PhotoScrollerViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wJ6-nO-rKv"/>
+                        <viewControllerLayoutGuide type="bottom" id="czI-y9-TY3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EjQ-94-9pp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5F-sF-0Kh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rHq-x4-1oY" id="OUY-9D-6Qa"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="czI-y9-TY3" firstAttribute="top" secondItem="a5F-sF-0Kh" secondAttribute="bottom" id="HQ9-UL-l2W"/>
+                            <constraint firstItem="a5F-sF-0Kh" firstAttribute="leading" secondItem="EjQ-94-9pp" secondAttribute="leading" id="Rcb-cK-ZIb"/>
+                            <constraint firstAttribute="trailing" secondItem="a5F-sF-0Kh" secondAttribute="trailing" id="cVg-8K-uMp"/>
+                            <constraint firstItem="a5F-sF-0Kh" firstAttribute="top" secondItem="EjQ-94-9pp" secondAttribute="top" id="uWw-Dq-DXD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="a5F-sF-0Kh" id="Or0-Te-sGa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEu-qX-0Gb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="694"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="9Fb-41-Kbx">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="F2H-df-XyG" customClass="WebViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hf0-zO-Fae"/>
+                        <viewControllerLayoutGuide type="bottom" id="iLA-x1-Tje"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZT3-4q-gtU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec6-zZ-amZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="F2H-df-XyG" id="irZ-ku-Ynt"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iLA-x1-Tje" firstAttribute="top" secondItem="ec6-zZ-amZ" secondAttribute="bottom" id="AGn-Ql-UUw"/>
+                            <constraint firstItem="ec6-zZ-amZ" firstAttribute="top" secondItem="ZT3-4q-gtU" secondAttribute="top" id="NXa-oV-UpL"/>
+                            <constraint firstAttribute="trailing" secondItem="ec6-zZ-amZ" secondAttribute="trailing" id="eXQ-VI-fsb"/>
+                            <constraint firstItem="ec6-zZ-amZ" firstAttribute="leading" secondItem="ZT3-4q-gtU" secondAttribute="leading" id="kp9-Fn-ccv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ec6-zZ-amZ" id="taI-1b-a7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rio-2h-HKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="-147"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="UkI-l9-jRc">
+            <objects>
+                <viewController storyboardIdentifier="CollectionViewController" id="rnG-cK-OYo" customClass="CollectionViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ncp-Yh-m3a"/>
+                        <viewControllerLayoutGuide type="bottom" id="AdH-w4-vPC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gGl-sD-ruJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-OE-zNY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qMR-He-O3c">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="72H-Ij-MVr">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="rnG-cK-OYo" id="ZMi-6a-Cfm"/>
+                                    <outlet property="delegate" destination="rnG-cK-OYo" id="1Rz-G3-rz3"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4jQ-OE-zNY" secondAttribute="trailing" id="5Ip-x8-oLa"/>
+                            <constraint firstItem="4jQ-OE-zNY" firstAttribute="leading" secondItem="gGl-sD-ruJ" secondAttribute="leading" id="XkV-PK-yfp"/>
+                            <constraint firstItem="4jQ-OE-zNY" firstAttribute="top" secondItem="gGl-sD-ruJ" secondAttribute="top" id="jsg-xN-8d1"/>
+                            <constraint firstItem="AdH-w4-vPC" firstAttribute="top" secondItem="4jQ-OE-zNY" secondAttribute="bottom" id="wqL-fk-nXh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="4jQ-OE-zNY" id="Xbx-dW-Pp0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dj-tJ-7UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="694"/>
+        </scene>
+    </scenes>
+</document>
